@@ -5,11 +5,15 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {WikiSearchComponent} from './wikipediaSearch/wikisearch.component';
 import {AnimationComponent} from './animation/animation.component'
 import { routing }              from './app.routing';
+import { HttpModule, JsonpModule} from '@angular/http';
+import {WikipediaSearchService} from './wikipediaSearch/WikipediaSearchService'
 
 @NgModule({
   imports: [
     BrowserModule,
-     routing
+    HttpModule,
+    JsonpModule,
+    routing
   ],
   declarations: [
     AppComponent,
@@ -17,6 +21,7 @@ import { routing }              from './app.routing';
     WikiSearchComponent,
     AnimationComponent
   ],
+   providers: [ WikipediaSearchService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

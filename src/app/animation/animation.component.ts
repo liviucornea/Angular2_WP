@@ -8,11 +8,15 @@ import {Component, trigger, state, style, transition, animate,  keyframes} from 
             })),
             state('go', style({
                 'background-color':'green',
-                'height':'100px'
+                'height':'100px',
+                'width': '100px',
+                'transform':'translateX(30%)'
             })),
             state('stop', style({
                 'background-color':'red',
-                'height':'50px'
+                'height':'50px',
+                'width': '50px',
+                'transform':'translateX(-30%)'
             })),
             transition('void <=> *', animate(1000, keyframes([
                 style({'transform':'scale(0)'}),

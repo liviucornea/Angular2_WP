@@ -1,7 +1,36 @@
-<main>
-  <h1>Wiki Search !!!</h1>
-
-</main>
-<div>
-    Wiki Search is  under construction!!
+<div style="padding-bottom: 10px;">
+      <h4>Wiki Search !!!</h4>
 </div>
+
+<div>
+ <label>{{fetches}}</label>  <input #term (keyup)="search(term.value)"/>
+<hr>
+ <!-- 
+    <input #term (keyup)="search(term.value)"/>
+   <input (input)="seach($event.target.value)"> 
+ 
+ -->
+ <span> Display search reasult from array:</span>
+    <ul>
+       <li *ngFor="let item of items ">{{item}}</li>
+    </ul>
+<hr>
+<span> Display observable stream (async): </span>
+    <ul>
+       <li *ngFor="let obsItem of observableItems | async ">{{obsItem}}</li>
+    </ul>
+
+</div>
+
+
+<div>
+  <h2> Whate we got here in Angular 2 from RxJs: </h2>
+  <ul>
+       <li>Consuming events as Observable</li>
+       <li>Debounce the user input using debounceTime</li>
+        <li>Prevent unnecessary requests with distinctUntilChanged</li>
+        <li>Deal with out of order responses using switchMap</li>
+        <li>Build fully reactive APIs with Observables</li>
+  </ul>
+
+ </div>   

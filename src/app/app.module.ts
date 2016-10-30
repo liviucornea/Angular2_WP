@@ -3,6 +3,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {WikiSearchComponent} from './wikipediaSearch/wikisearch.component';
+import {AnimationComponent} from './animation/animation.component'
 import { routing }              from './app.routing';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { routing }              from './app.routing';
   declarations: [
     AppComponent,
     DashboardComponent,
-    WikiSearchComponent
+    WikiSearchComponent,
+    AnimationComponent
   ],
   bootstrap: [ AppComponent ]
 })

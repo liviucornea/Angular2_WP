@@ -1,0 +1,15 @@
+<div class="animation">
+    <hr>
+<div
+    [@signal]="signal"
+    class="traffic-light"
+    *ngIf="isHere"
+    >
+    
+</div>
+<hr>
+<button (click)="onGoClick()">Start</button>
+<button (click)="onStopClick()">Stop</button>
+<hr>
+<button (click)="onToggleClick()">Toggle</button>
+</div>

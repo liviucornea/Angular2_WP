@@ -1,0 +1,9 @@
+.traffic-light{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+.animation{
+    width:100%;
+/*background-color: white;*/
+}

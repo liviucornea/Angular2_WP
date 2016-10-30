@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="top">
+      <h1>{{title}}</h1>
+      <img id="angImg" src="../../public/images/angular.png">
+    </div>
+</div>
+<div class="container">
+      <div class="middle">
+        <nav>
+            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            <a routerLink="/wikisearch" routerLinkActive="active">Wikipedia Search</a>
+          </nav>
+          <router-outlet></router-outlet>
+      </div>
+</div>

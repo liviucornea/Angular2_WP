@@ -33,10 +33,12 @@ export class AnimationComponent {
     signal: any;
     isHere: boolean = true;
     onGoClick(){
+        this.isHere = true;
         this.signal = 'go';
     }
 
     onStopClick(){
+        this.isHere = true;
         this.signal = 'stop';
     }
 

@@ -12,7 +12,7 @@ export class WikipediaSearchService {
                     .switchMap(term => this.rawSearch(term));
     }
     rawSearch (term: string) {
-            let wikiUrl = 'http://en.wikipedia.org/w/api.php';
+            let wikiUrl = 'https://en.wikipedia.org/w/api.php';
             let queryString = `?search=${term}&action=opensearch&format=json&callback=JSONP_CALLBACK`;
             return this.jsonp
             .get(wikiUrl + queryString)

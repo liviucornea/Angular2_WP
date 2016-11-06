@@ -1,15 +1,15 @@
 <div style="padding-bottom: 10px;">
       <h4>Wiki Search !!!</h4>
+      <h1>....for example search for your prefered city...like Bucharest...</h1>
 </div>
 
 <div>
  <label>{{fetches}}</label>  <input #term (keyup)="search(term.value)"/>
 <hr>
  <!-- 
-    <input #term (keyup)="search(term.value)"/>
+    <input #term (keyup)="searchTermStream$.next(term.value)"/>
    <input (input)="seach($event.target.value)"> 
- 
- -->
+  -->
  <span> Display search reasult from array:</span>
     <ul>
        <li *ngFor="let item of items ">{{item}}</li>
@@ -24,7 +24,7 @@
 
 
 <div>
-  <h2> Whate we got here in Angular 2 from RxJs: </h2>
+  <h2> What we implemented here in Angular 2, using RxJs: </h2>
   <ul>
        <li>Consuming events as Observable</li>
        <li>Debounce the user input using debounceTime</li>

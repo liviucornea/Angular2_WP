@@ -1,19 +1,24 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {WikiSearchComponent} from './wikipediaSearch/wikisearch.component';
 import {AnimationComponent} from './animation/animation.component'
-import { routing }              from './app.routing';
+import { AppRoutingModule }              from './app.routing.module';
 import { HttpModule, JsonpModule} from '@angular/http';
 import {WikipediaSearchService} from './wikipediaSearch/WikipediaSearchService'
+// ng2Module is an example of custom module in Angular 2;
+import {ng2Module} from './ng2Module/ng2Module.module';
+import {AllItemsComponent} from './ng2Module/allItems.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    routing
+    ng2Module,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

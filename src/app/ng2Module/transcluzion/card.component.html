@@ -1,0 +1,20 @@
+<!-- Please not that selection is  based on html custom attributes :card-body, card-header :
+ex: select="card-header"
+these attributes are created in transcluzion.html but and important think here is 
+that you need to add "schema" in module metadata
+(see for this \, the specific change made in ng2Modules : schemas:      [ NO_ERRORS_SCHEMA ] // add this line
+    -->
+<!-- card.component.html -->
+
+<div class="card">
+    <div class="card-header">
+    <!-- header slot here -->
+        <ng-content select="card-header"></ng-content>
+    </div>
+    <!-- body slot here -->
+    <ng-content select="card-body"></ng-content>
+    <div class="card-footer">
+    <!-- footer -->
+        <ng-content select="card-footer"></ng-content>
+    </div>
+</div>

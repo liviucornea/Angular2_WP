@@ -1,7 +1,7 @@
 import { Component, Input, Output } from '@angular/core';
 @Component({
   selector: 'card',
-  styles: [require('../allItems.component.css')],
+  styleUrls: ['../allItems.component.css'],
   templateUrl: 'card.component.html',
 })
 export class CardComponent {

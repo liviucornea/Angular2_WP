@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'all-items',
   //templateUrl: './dashboard.html',
 template : require('./allItems.html'),
-  styles: [require('./allItems.component.css')]
+styleUrls: ['./allItems.component.css']
 })
 export class AllItemsComponent {
 title = `Angular 2.1 to items are presented here!`;

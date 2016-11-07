@@ -7,7 +7,7 @@ import { WikipediaSearchService } from './WikipediaSearchService';
 @Component({
   selector: 'my-wiki-search',
   templateUrl: './wikiSearch.html',
-  styleUrls: ['../dashboard/dashboard.component.css']
+  styles: [require('../dashboard/dashboard.component.css')]
   
 })
 export class WikiSearchComponent implements OnInit {

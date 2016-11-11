@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Observable }       from 'rxjs/Observable';
 import { Subject }          from 'rxjs/Subject';
 import { WikipediaSearchService } from './WikipediaSearchService';
-//import './rxjs-operators';
+import './rxjs-operators';
 
 @Component({
   selector: 'my-wiki-search',

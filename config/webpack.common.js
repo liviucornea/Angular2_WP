@@ -2,8 +2,19 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 
-module.exports = {
+var metadata = {
+  title: 'Angular 2 with WebPack',
+  baseUrl: '/',
+  host: 'localhost',
+  port: 8080,
+  ENV: ENV
+};
+
+var config = {
+   // static data for index.html
+  metadata: metadata,
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
@@ -18,7 +29,8 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+        exclude: [ /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/ ]
       },
       {
         test: /\.html$/,
@@ -51,3 +63,4 @@ module.exports = {
     })
   ]
 };
+module.exports  = config;

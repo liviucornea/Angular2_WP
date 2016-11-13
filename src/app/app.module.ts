@@ -9,16 +9,16 @@ import { HttpModule, JsonpModule} from '@angular/http';
 import {WikipediaSearchService} from './wikipediaSearch/WikipediaSearchService'
 // ng2Module is an example of custom module in Angular 2;
 import {ng2Module} from './ng2Module/ng2Module.module';
-import {AllItemsComponent} from './ng2Module/allItems.component';
-
+import {ObservableInActions} from './observablesInAction/observableInActions.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     JsonpModule,
+    ObservableInActions,
     ng2Module,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,

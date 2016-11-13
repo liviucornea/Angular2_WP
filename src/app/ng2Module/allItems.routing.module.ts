@@ -5,11 +5,11 @@ import {TranscluzionComponent} from './transcluzion/transcluzion.component'
 
 @NgModule({
   imports: [RouterModule.forChild([
-    { path: 'allItems/transcluzion', component: TranscluzionComponent },
-    {
-    path: 'allItems',
-    component: AllItemsComponent
-  }
+    { path: 'allItems', component: AllItemsComponent ,
+    children: [
+    { path: 'transcluzion', component: TranscluzionComponent }
+    ]
+    }
   ])],
   exports: [RouterModule]
 })

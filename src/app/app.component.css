@@ -12,10 +12,11 @@
 .middle {
   /*
   position: absolute;
-  width: 90%;
+  
   left: 50%;
   margin: -100px 0 0 -150px;
   */
+  width: 90%;
   text-align: center;
   display: block;
 

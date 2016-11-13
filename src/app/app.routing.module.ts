@@ -4,7 +4,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {WikiSearchComponent} from './wikipediaSearch/wikisearch.component';
 import {AnimationComponent} from './animation/animation.component';
 import {AllItemsComponent} from './ng2Module/allItems.component'
-
+import {RxJsExamplesComponent} from './observablesInAction/rxJsExamples.component';
 const appRoutes: Routes = [
   {
     path: '',
@@ -26,6 +26,10 @@ const appRoutes: Routes = [
    {
     path: 'allItems',
     component: AllItemsComponent
+  },
+  { 
+    path: 'rxJsExamples',
+   component:  RxJsExamplesComponent
   }
 ];
 

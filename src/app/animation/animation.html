@@ -3,12 +3,14 @@
     <span>Scaling using cubic Bézier timming function. 
         See <a href="http://www.easings.net" style="color:red;"> www.easings.net </a> for other options!</span>
     <hr>
-<div
-    [@signal]="signal"
-    class="traffic-light"
-    *ngIf="isHere"
-    >
-    
+    <div class="middle">
+            <div 
+                [@signal]="signal"
+                class="traffic-light"
+                *ngIf="isHere"
+                >
+                
+            </div>
 </div>
 <hr>
 <button (click)="onGoClick()">Start</button>

@@ -26,7 +26,7 @@ import {ObservableInActions} from './observablesInAction/observableInActions.mod
     WikiSearchComponent,
     AnimationComponent
   ],
-   providers: [ WikipediaSearchService],
+   providers: [ WikipediaSearchService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

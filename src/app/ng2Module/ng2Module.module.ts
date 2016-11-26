@@ -11,15 +11,22 @@ import {AllItemsComponent} from './allItems.component';
 import {TranscluzionComponent} from './transcluzion/transcluzion.component';
 import {CardComponent} from './transcluzion/card.component';
 import {allItemsRoutingModule} from './allItems.routing.module';
-
+import {ContactsListComponent} from './resolvingRoute/contact-list.component';
+import {ContactsService} from './resolvingRoute/contacts.service';
+//import {resRoutRoutingModule} from './resolvingRoute/resRoute.routing'
+import {ContactsDetailComponent} from './resolvingRoute/contact-detail.component';
+import {ContactResolve} from './resolvingRoute/contact.resolve';
 @NgModule({
   imports: [ CommonModule, 
   FormsModule ,
   allItemsRoutingModule
   ],
-  declarations: [  HighlightDirective , TranscluzionComponent,  AllItemsComponent, CardComponent],
+  declarations: [ HighlightDirective , TranscluzionComponent, 
+                  AllItemsComponent, CardComponent, 
+                  ContactsListComponent, ContactsDetailComponent
+                  ],
   exports:      [AllItemsComponent],
-  providers:    [ ],
+  providers:    [ContactsService, ContactResolve ],
   schemas:      [ NO_ERRORS_SCHEMA ] // add this line
 })
 export class ng2Module { }

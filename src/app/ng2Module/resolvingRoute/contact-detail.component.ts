@@ -14,15 +14,13 @@ export class ContactsDetailComponent implements OnInit {
   constructor(private contactsService: ContactsService, private route: ActivatedRoute) {}
   
   ngOnInit() {
-     this.contact = this.route.snapshot.data['contact'];
- /*  
+   this.contact = this.route.snapshot.data['contact'];
+  // this.contact = this.contactsService.getDelayedContact(this.route.snapshot.params['id']);
+   /* 
     this.contactsService.getContact(this.route.snapshot.params['id'])
         .subscribe((contact:any) => 
-        {
-          this.contact = contact;
-          });
-*/
-
-  }
+        {    this.contact = contact;       });
+    */
+ }
 
 }

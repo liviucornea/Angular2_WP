@@ -5,7 +5,7 @@ import {TranscluzionComponent} from './transcluzion/transcluzion.component';
 import {ContactsListComponent} from './resolvingRoute/contact-list.component';
 import {ContactsDetailComponent} from './resolvingRoute/contact-detail.component';
 import {ContactResolve} from './resolvingRoute/contact.resolve';
-//liviu ...vezi problema de mai jos cu resolve :{}
+//liviu ...please note when you use resolve for ruting :see the comment in contacts.service
 
 @NgModule({
   imports: [RouterModule.forChild([
@@ -13,8 +13,8 @@ import {ContactResolve} from './resolvingRoute/contact.resolve';
     children: [  { path: 'transcluzion', component: TranscluzionComponent } ,
     {path: 'contactList', component: ContactsListComponent},
      { path: 'contactList', component: ContactsListComponent,
-             children: [ { path: 'contact/:id', component: ContactsDetailComponent,
-                                 resolve: {contact: ContactResolve}      
+             children: [ { path: 'contact/:id', component: ContactsDetailComponent
+            , resolve: {contact: ContactResolve  }
           }
     ]  
             }

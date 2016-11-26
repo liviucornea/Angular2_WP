@@ -20,6 +20,11 @@ export class ContactsListComponent implements OnInit {
   constructor(private contactsService: ContactsService) {}
   
   ngOnInit() {
-    this.contacts = this.contactsService.getContacts()
-  }
+    var self = this;
+
+  self.contacts = self.contactsService.getContacts();
+
+    
+  
+}
 }

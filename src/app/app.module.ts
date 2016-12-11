@@ -2,6 +2,7 @@ import { NgModule} from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {TestChildComponent} from './dashboard/test.child.component';
 import {WikiSearchComponent} from './wikipediaSearch/wikisearch.component';
 import {AnimationComponent} from './animation/animation.component'
 import { AppRoutingModule }              from './app.routing.module';
@@ -10,7 +11,7 @@ import {WikipediaSearchService} from './wikipediaSearch/WikipediaSearchService'
 // ng2Module is an example of custom module in Angular 2;
 import {ng2Module} from './ng2Module/ng2Module.module';
 import {ObservableInActions} from './observablesInAction/observableInActions.module';
-
+// dashboard is lazy loaded
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import {ObservableInActions} from './observablesInAction/observableInActions.mod
     AppComponent,
     DashboardComponent,
     WikiSearchComponent,
-    AnimationComponent
+    AnimationComponent,
+    TestChildComponent
   ],
    providers: [ WikipediaSearchService ],
   bootstrap: [ AppComponent ]

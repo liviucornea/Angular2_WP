@@ -12,8 +12,9 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent
+    path: 'dashboard', //loadChildren: 'app/dashboard/dashboard.module'
+    component: DashboardComponent    
+    //loadChildren: 'app/dashboard/dashboard.module'
   },
    {
     path: 'animation',

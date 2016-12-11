@@ -4,14 +4,8 @@ import { ContactsService } from './contacts.service';
 
 @Component({
   selector: 'contacts-list',
-  template: `
-    <ul>
-      <li *ngFor="let contact of contacts | async">
-        <a [routerLink]="['contact', contact.id]">{{contact?.name}}</a>
-      </li>
-    </ul>
-    <router-outlet></router-outlet>
-  `
+  template:  require('./contact-List.html'),
+  styleUrls: ['./contact-list.css']
 })
 export class ContactsListComponent implements OnInit {
   

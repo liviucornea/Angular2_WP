@@ -10,15 +10,19 @@ import { HighlightDirective } from './directive/highlight.directive';
 import {AllItemsComponent} from './allItems.component';
 import {TranscluzionComponent} from './transcluzion/transcluzion.component';
 import {CardComponent} from './transcluzion/card.component';
-import {allItemsRoutingModule} from './allItems.routing.module';
+
 import {ContactsListComponent} from './resolvingRoute/contact-list.component';
 import {ContactsService} from './resolvingRoute/contacts.service';
 import {ContactsDetailComponent} from './resolvingRoute/contact-detail.component';
 import {ContactResolve} from './resolvingRoute/contact.resolve';
+import {allItemsRoutingModule} from './allItems.routing.module';
+import newallItemsRoutingModule from './NEWallItems.routing';
+
 @NgModule({
   imports: [ CommonModule, 
   FormsModule ,
-  allItemsRoutingModule,
+ //allItemsRoutingModule,
+  newallItemsRoutingModule
   ],
   declarations: [ HighlightDirective , TranscluzionComponent, 
                   AllItemsComponent, CardComponent, 

@@ -1,5 +1,6 @@
 import '../../rxjs-operators';
 import { Observable }       from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject'
 import { Component , ElementRef, ViewChild} from '@angular/core';
 import {resolve} from 'url';
 
@@ -11,6 +12,7 @@ styleUrls: ['./updatingData.css']
 })
 export class UpdatingDataComponent {
         outputData = "experiment";
+        status = false;
 @ViewChild('stop') stop: ElementRef;
         ngOnInit(){
               // const startButton = document.querySelector('#start');
@@ -18,7 +20,7 @@ export class UpdatingDataComponent {
               // const stopButton = document.querySelector('#stop');
               const stopButton  = this.stop;
                 const start$ = Observable.fromEvent(startButton, 'click');
-                const interval$ = Observable.interval(500);
+                const interval$ = Observable.interval(1000);
                 const stop$ = Observable.fromEvent(this.stop.nativeElement, 'click');
 
                 const intervalThatStops$ = interval$
@@ -31,7 +33,18 @@ export class UpdatingDataComponent {
                     }, data)
                     .subscribe((x)=> this.outputData = x.count.toString());
             }
+toggle(){
+  this.status = !this.status;
+  this.pauser.next(this.status);
+}
 
-        constructor(private elementRef: ElementRef){ }
-
+// block bellow build pausable 
+ source = Observable.interval(1000);
+  pauser = new Subject();
+   pausable = this.pauser.switchMap(paused => paused ? Observable.never() : this.source);
+        constructor(private elementRef: ElementRef){
+// All the magic is here
+this.pausable.subscribe(x => this.outputData = x.toString());
+this.pauser.next(true);
+         }
  }
